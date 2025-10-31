@@ -22,7 +22,7 @@ These projects collectively showcase a range of core data science skills:
 - Identified key drivers of customer loyalty such as spending patterns and distance from store.  
 - Demonstrated robust data preprocessing and feature importance analysis.
 
-➡️ [View Project →](Regression Modeling/2024-10-11-predicting-customer-loyalty.md)
+➡️ [View Project →](Regression%20Modeling/2024-10-11-predicting-customer-loyalty.md)
 
 ---
 
@@ -34,7 +34,7 @@ These projects collectively showcase a range of core data science skills:
 - Emphasized interpretability via feature and permutation importance.  
 - Provided actionable business insight: proximity to store was the top predictor of signups.
 
-➡️ [View Project →](2024-10-19-enhancing-targeting-accuracy.md)
+➡️ [View Project →](Classification%20Modeling/2024-10-19-enhancing-targeting-accuracy.md)
 
 ---
 
@@ -46,7 +46,7 @@ These projects collectively showcase a range of core data science skills:
 - Provided clear actionable insights for personalized marketing strategies.  
 - Suggested future applications: deeper subcategory segmentation, integration with demographic data.
 
-➡️ [View Project →](2024-10-25-customer-segmentation.md)
+➡️ [View Project →](KMeans$20Clustering/2024-10-25-customer-segmentation.md)
 
 ---
 
