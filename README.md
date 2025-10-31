@@ -50,7 +50,7 @@ These projects collectively showcase a range of core data science skills:
 
 ---
 
-## 💻 Technical Stack
+## Technical Stack
 
 | Tool / Library | Purpose |
 |----------------|----------|
