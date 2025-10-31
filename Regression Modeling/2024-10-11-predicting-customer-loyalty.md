@@ -781,7 +781,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/regression-tree-max-depth-plot.png "Decision Tree Max Depth Plot")
+![alt text](images/regression-tree-max-depth-plot.png "Decision Tree Max Depth Plot")
 
 <br>
 
@@ -816,7 +816,7 @@ That code gives us the below plot:
 
 <br>
 
-![alt text](/img/posts/regression-tree-nodes-plot.png "Decision Tree Max Depth Plot")
+![alt text](images/regression-tree-nodes-plot.png "Decision Tree Max Depth Plot")
 
 <br>
 This is a very powerful visual that helps us interpret what the model is doing 'under the hood', which can be useful for stakeholders. Like in the Linear Regression Model's coefficient output, we can interpret the model's predictions, but here the findings are even more intuitive. For example, most of the variance in customer loyalty can be found by splitting the data between those who live less than or equal to 1.975 miles from the store. 
@@ -1070,12 +1070,12 @@ That code gives us the below plots - the first being for *Feature Importance* an
 
 <br>
 
-![alt text](/img/posts/rf-regression-feature-importance.png "Random Forest Feature Importance Plot")
+![alt text](images/rf-regression-feature-importance.png "Random Forest Feature Importance Plot")
 <br>
 
 <br>
 
-![alt text](/img/posts/rf-regression-permutation-importance.png "Random Forest Permutation Importance Plot")
+![alt text](images/rf-regression-permutation-importance.png "Random Forest Permutation Importance Plot")
 
 <br>
 
