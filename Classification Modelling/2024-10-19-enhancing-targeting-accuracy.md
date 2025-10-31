@@ -361,6 +361,8 @@ The highest cross-validated classification accuracy (0.904) is when we include s
 
 <br>
 
+
+
 ![alt text](images/log-reg-feature-selection-plot.png "Logistic Regression Feature Selection Plot")
 
 <br>
@@ -758,7 +760,7 @@ These are all higher than what we saw when applying Logistic Regression, even af
 
 <br>
 
-### Visualise Our Decision Tree <a name="clftree-visualise"></a>
+### Visualize Our Decision Tree <a name="clftree-visualise"></a>
 
 To see the decisions that have been made in the tree, we can use the plot_tree functionality that we imported from scikit-learn. 
 
@@ -788,7 +790,7 @@ We can note that the *very first split* appears to be using the variable *distan
 
 <br>
 
-### Decision Tree Regularisation <a name="clftree-model-regularisation"></a>
+### Decision Tree Regularization <a name="clftree-model-regularisation"></a>
 
 Decision Trees will over-fit if they're not limited in some way. Without any limits on their splitting, they will end up learning the training data perfectly. Instead we want a model that is flexible and can generalize, instead of predicting data that it already knows, as this will be more robust & reliable when making predictions on *new* data.
 
