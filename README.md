@@ -22,7 +22,7 @@ These projects collectively showcase a range of core data science skills:
 - Identified key drivers of customer loyalty such as spending patterns and distance from store.  
 - Demonstrated robust data preprocessing and feature importance analysis.
 
-➡️ [View Project →](2024-10-11-predicting-customer-loyalty.md)
+➡️ [View Project →](Regression Modeling/2024-10-11-predicting-customer-loyalty.md)
 
 ---
 
