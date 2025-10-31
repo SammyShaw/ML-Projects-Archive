@@ -322,6 +322,7 @@ Features Selection also works the same for logistic regression as it does for li
 Although I like to analyze variable relationships at the bivariate level - using Chi-Square analyses to assess relationships (with categorical outcomes), *Recursive Feature Elimination With Cross Validation* using the scikitlearn package is convenient for machine learning tasks. RFECV splits the data into many "chunks" and iteratively trains & validates models on each "chunk" seperately. This means that each time we assess different models with different variables included, or eliminated, the algorithm also knows how accurate each of those models was. From the suite of model scenarios that are created, the algorithm can determine which provided the best accuracy, and thus can infer the best set of input variables to use!
 
 <br>
+
 ```python
 
 # instantiate RFECV & the model type to be utilised
@@ -341,7 +342,6 @@ X_test = X_test.loc[:, feature_selector.get_support()]
 
 ```
 
-<br>
 The below code then produces a plot that visualises the cross-validated classification accuracy with each potential number of features.
 
 ```python
@@ -361,7 +361,7 @@ The highest cross-validated classification accuracy (0.904) is when we include s
 
 <br>
 
-![alt text](/img/posts/log-reg-feature-selection-plot.png "Logistic Regression Feature Selection Plot")
+![alt text](images/log-reg-feature-selection-plot.png "Logistic Regression Feature Selection Plot")
 
 <br>
 
@@ -425,7 +425,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/log-reg-confusion-matrix.png "Logistic Regression Confusion Matrix")
+![alt text](images/log-reg-confusion-matrix.png "Logistic Regression Confusion Matrix")
 
 <br>
 The aim is to have a high proportion of observations falling into the top left cell (predicted non-signup and actual non-signup) and the bottom right cell (predicted signup and actual signup).
@@ -553,7 +553,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/log-reg-optimal-threshold-plot.png "Logistic Regression Optimal Threshold Plot")
+![alt text](images/log-reg-optimal-threshold-plot.png "Logistic Regression Optimal Threshold Plot")
 
 <br>
 
@@ -721,7 +721,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/clf-tree-confusion-matrix.png "Decision Tree Confusion Matrix")
+![alt text](images/clf-tree-confusion-matrix.png "Decision Tree Confusion Matrix")
 
 <br>
 <br>
@@ -780,7 +780,7 @@ That code gives us the below plot:
 
 <br>
 
-![alt text](/img/posts/clf-tree-nodes-plot.png "Decision Tree Max Depth Plot")
+![alt text](images/clf-tree-nodes-plot.png "Decision Tree Max Depth Plot")
 
 <br>
 
@@ -836,7 +836,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/clf-tree-max-depth-plot.png "Decision Tree Max Depth Plot")
+![alt text](images/clf-tree-max-depth-plot.png "Decision Tree Max Depth Plot")
 
 <br>
 In the plot we can see that the *maximum* F1-Score on the test set is found when applying a *max_depth* value of 9 which takes our F1-Score up to 0.925
@@ -1001,7 +1001,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/rf-confusion-matrix.png "Random Forest Confusion Matrix")
+![alt text](images/rf-confusion-matrix.png "Random Forest Confusion Matrix")
 
 
 <br>
@@ -1094,11 +1094,11 @@ That code gives us the below plots - the first being for *Feature Importance* an
 
 <br>
 
-![alt text](/img/posts/rf-classification-feature-importance.png "Random Forest Feature Importance Plot")
+![alt text](images/rf-classification-feature-importance.png "Random Forest Feature Importance Plot")
 <br>
 <br>
 
-![alt text](/img/posts/rf-classification-permutation-importance.png "Random Forest Permutation Importance Plot")
+![alt text](images/rf-classification-permutation-importance.png "Random Forest Permutation Importance Plot")
 
 <br>
 The overall story from both approaches is very similar, in that by far, the most important or impactful input variables are *distance_from_store* and *transaction_count*
@@ -1333,7 +1333,7 @@ The variables that have been dropped are *total_items* and *credit score* - we w
 
 <br>
 
-![alt text](/img/posts/knn-feature-selection-plot.png "KNN Feature Selection Plot")
+![alt text](images/knn-feature-selection-plot.png "KNN Feature Selection Plot")
 
 <br>
 
@@ -1392,7 +1392,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/knn-confusion-matrix.png "KNN Confusion Matrix")
+![alt text](images/knn-confusion-matrix.png "KNN Confusion Matrix")
 
 <br>
 
@@ -1474,7 +1474,7 @@ plt.show()
 
 <br>
 
-![alt text](/img/posts/knn-optimal-k-value-plot.png "KNN Optimal k Value Plot")
+![alt text](images/knn-optimal-k-value-plot.png "KNN Optimal k Value Plot")
 
 <br>
 
