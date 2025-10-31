@@ -29,7 +29,7 @@ ___
 
 ## Project Overview  <a name="overview-main"></a>
 
-#### Context <a name="overview-context"></a>
+### Context <a name="overview-context"></a>
 
 ABC Grocery would like to understand who is buying what at their stores. They wonder if lifestyle choices may affect which food areas customers are shopping into, or more interestingly, not shopping into. 
 
@@ -39,7 +39,7 @@ Fortunately, we have data on the categories of food that customers buy, and we c
 
 <br>
 
-#### Actions <a name="overview-actions"></a>
+### Actions <a name="overview-actions"></a>
 
 After compiling the necessary data from tables in the database, I use the Pandas package in Python to aggregate transaction data across product areas from the most recent six months to a customer level. The final data for clustering is, for each customer, the percentage of sales allocated to each product area.
 
@@ -53,7 +53,7 @@ After preparing the data, other k-means cluster analysis tasks include:
 <br>
 <br>
 
-#### Results <a name="overview-results"></a>
+### Results <a name="overview-results"></a>
 
 WCSS analysis suggests customers should be segmented into 3 clusters. These clusters ranged in size, with Cluster 0 accounting for 73.6% of the customer base, Cluster 2 accounting for 14.6%, and Cluster 1 accounting for 11.8%.
 
@@ -69,7 +69,7 @@ To help embed this segmentation into the business, let's call this the "You Are 
 
 <br>
 
-#### Growth/Next Steps <a name="overview-growth"></a>
+### Growth/Next Steps <a name="overview-growth"></a>
 
 It would be interesting to also run this segmentation task at a lower level of product areas, so rather than just the four areas of Meat, Dairy, Fruit, Vegetables - clustering spend across the sub-categories *below* (or within) those categories would mean we could create more specific clusters and get an even more granular understanding of dietary preferences within the customer base.
 
@@ -159,7 +159,7 @@ ___
 
 <br>
 
-#### Concept Overview <a name="kmeans-overview"></a>
+### Concept Overview <a name="kmeans-overview"></a>
 
 K-Means is an *unsupervised learning* algorithm, meaning that it does not look to predict known labels or values, but instead looks to isolate patterns within unlabelled data.
 
@@ -190,7 +190,7 @@ There are three vital preprocessing steps for k-means:
 
 <br>
 
-#### Missing Values
+### Missing Values
 
 Missing values can cause issues for k-means, as the algorithm won't know where to plot those data-points along the dimension where the value is not present. 
 
@@ -198,13 +198,13 @@ Fortunately, in this case we don't have to worry about imputing the missing valu
 
 <br>
 
-#### Outliers
+### Outliers
 
 Outliers can cause problems for k-means clustering tasks. Even though we will scale the data, an outlier at one extreme of a distribution can cause the more normal values to be “bunched up," far from the outlier, and this will make it hard to compare their values to the other input variables. But in this case our data is percentages, so this won't be a problem.
 
 <br>
 
-#### Feature Scaling
+### Feature Scaling
 
 Normalization, rather than standardization, is the feature scaling method of choice for k-means tasks. Normalization rescales datapoints so that they exist in a range between 0 and 1.
 
@@ -224,7 +224,7 @@ data_for_clustering_scaled = pd.DataFrame(scale_norm.fit_transform(data_for_clus
 
 <br>
 
-#### Finding A Good Value For k <a name="kmeans-k-value"></a>
+### Finding A Good Value For k <a name="kmeans-k-value"></a>
 
 At this point, the data is ready for the k-means clustering algorithm. Before that, however, we need to know how many clusters we want the data split into.
 
@@ -265,7 +265,7 @@ plt.show()
 
 <br>
 
-![alt text](images/kmeans-optimal-k-value-plot.png "K-Means Optimal k Value Plot")
+![alt text](kmeans-optimal-k-value-plot.png "K-Means Optimal k Value Plot")
 
 <br>
 Based upon the shape of the above plot - there does appear to be an elbow at k = 3.  Prior to that there is a significant drop in the WCSS score, but following the decreases are much smaller, meaning this could be a point that suggests adding *more clusters* will provide little extra benefit in separating our data. A small number of clusters can be beneficial when considering how easy it is for the business to focus on, and understand, each - so we will continue on, and fit our k-means clustering solution with k = 3.
@@ -308,7 +308,7 @@ Once ther data is separated into distinct clusters, we can refer back to our per
 
 <br>
 
-#### Cluster Sizes
+### Cluster Sizes
 
 First, let's assess the number of customers that fall into each cluster.
 
@@ -332,7 +332,7 @@ Based on these results, it does appear we do have a skew toward Cluster 0 with C
 
 <br>
 
-#### Cluster Attributes
+### Cluster Attributes
 
 Second, let's see how these distinct groups actually shop.
 
