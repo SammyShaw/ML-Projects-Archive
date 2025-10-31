@@ -390,7 +390,7 @@ So, according to the algorithm, the highest cross-validated accuracy (0.8635) is
 
 <br>
 
-![alt text](/img/posts/lin-reg-feature-selection-plot.png "Linear Regression Feature Selection Plot")
+![alt text](Regression%20Modeling/images/lin-reg-feature-selection-plot.png "Linear Regression Feature Selection Plot")
 
 <br>
 
