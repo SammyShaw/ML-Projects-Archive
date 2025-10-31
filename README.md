@@ -46,7 +46,7 @@ These projects collectively showcase a range of core data science skills:
 - Provided clear actionable insights for personalized marketing strategies.  
 - Suggested future applications: deeper subcategory segmentation, integration with demographic data.
 
-➡️ [View Project →](KMeans$20Clustering/2024-10-25-customer-segmentation.md)
+➡️ [View Project →](KMeans%20Clustering/2024-10-25-customer-segmentation.md)
 
 ---
 
