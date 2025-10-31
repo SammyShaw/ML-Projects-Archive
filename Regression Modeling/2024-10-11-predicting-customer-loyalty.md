@@ -607,7 +607,6 @@ data_for_model.dropna(how = "any", inplace = True)
 
 #### Split Out Data For Modelling
 
-<br>
 ```python
 
 # split data into X and y objects for modelling
@@ -622,8 +621,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 <br>
 
 #### Categorical Predictor Variables
-
-<br>
 
 ```python
 
