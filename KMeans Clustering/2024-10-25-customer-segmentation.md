@@ -96,6 +96,7 @@ In the code below, I process the data as follows:
 * Change the values from raw dollars, into a percentage of spend for each customer (to ensure each customer is comparable)
 
 <br>
+
 ```python
 
 # import required Python packages
@@ -134,7 +135,6 @@ transaction_summary_pivot = transaction_summary_pivot.div(transaction_summary_pi
 data_for_clustering = transaction_summary_pivot.drop(["Total"], axis = 1)
 
 ```
-<br>
 
 After preprocessing using Pandas, the dataset for clustering looks like the below sample:
 <br>
@@ -179,6 +179,7 @@ The algorithm does this by iterating over four key steps:
 Steps 3 & 4 continue to iterate until no data-points are reassigned to a closer centroid. In doing so, the centroids, which began as random points, end up centered within distinct groups (or clusters) of data. 
 
 <br>
+
 ### Data Preprocessing <a name="kmeans-preprocessing"></a>
 
 There are three vital preprocessing steps for k-means:
@@ -188,6 +189,7 @@ There are three vital preprocessing steps for k-means:
 * Feature Scaling
 
 <br>
+
 #### Missing Values
 
 Missing values can cause issues for k-means, as the algorithm won't know where to plot those data-points along the dimension where the value is not present. 
@@ -221,6 +223,7 @@ data_for_clustering_scaled = pd.DataFrame(scale_norm.fit_transform(data_for_clus
 ```
 
 <br>
+
 #### Finding A Good Value For k <a name="kmeans-k-value"></a>
 
 At this point, the data is ready for the k-means clustering algorithm. Before that, however, we need to know how many clusters we want the data split into.
@@ -258,12 +261,11 @@ plt.tight_layout()
 plt.show()
 
 ```
-<br>
 
 
 <br>
 
-![alt text](/img/posts/kmeans-optimal-k-value-plot.png "K-Means Optimal k Value Plot")
+![alt text](images/kmeans-optimal-k-value-plot.png "K-Means Optimal k Value Plot")
 
 <br>
 Based upon the shape of the above plot - there does appear to be an elbow at k = 3.  Prior to that there is a significant drop in the WCSS score, but following the decreases are much smaller, meaning this could be a point that suggests adding *more clusters* will provide little extra benefit in separating our data. A small number of clusters can be beneficial when considering how easy it is for the business to focus on, and understand, each - so we will continue on, and fit our k-means clustering solution with k = 3.
@@ -299,24 +301,26 @@ data_for_clustering["cluster"] = kmeans.labels_
 
 ```
 
-<br>
+
 ### Cluster Profiling <a name="kmeans-cluster-profiling"></a>
 
 Once ther data is separated into distinct clusters, we can refer back to our percentages table to find out *what it is* that is driving the separation. Then ABC Grocery can understand the customers within each, and the behaviors that make them unique.
 
 <br>
-##### Cluster Sizes
+
+#### Cluster Sizes
 
 First, let's assess the number of customers that fall into each cluster.
 
 <br>
+
 ```python
 
 # check cluster sizes
 data_for_clustering["cluster"].value_counts(normalize=True)
 
 ```
-<br>
+
 
 Running that code shows us that the three clusters are different in size, with the following proportions:
 
@@ -327,18 +331,20 @@ Running that code shows us that the three clusters are different in size, with t
 Based on these results, it does appear we do have a skew toward Cluster 0 with Cluster 1 & Cluster 2 being proportionally smaller.  This isn't right or wrong, it is simply showing up pockets of the customer base that are exhibiting different behaviors - and this is *exactly* what we want.
 
 <br>
-##### Cluster Attributes
+
+#### Cluster Attributes
 
 Second, let's see how these distinct groups actually shop.
 
 <br>
+
 ```python
 
 # profile clusters (mean % sales for each product area)
 cluster_summary = data_for_clustering.groupby("cluster")[["Dairy","Fruit","Meat","Vegetables"]].mean().reset_index()
 
 ```
-<br>
+
 That code results in the following table...
 
 | **Cluster** | **Dairy** | **Fruit** | **Meat** | **Vegetables** |
@@ -351,8 +357,10 @@ That code results in the following table...
 For *Cluster 0* we see roughly even portions being allocated to each of the product areas, with meat being the highest portion of their grocery spend. For *Cluster 1* we see quite high proportions of spend being allocated to Fruit & Vegetables, but very little to the Dairy & Meat product areas. It could be hypothesized that these customers are following a vegan diet. Finally customers in *Cluster 2* spend, on average, significant portions within Dairy, Fruit & Vegetables, but very little in the Meat product area - so similarly, we would make an early hypothesis that these customers are more along the lines of those following a vegetarian diet - interesting!
 
 ___
+
 <br>
-# Application <a name="kmeans-application"></a>
+
+## Application <a name="kmeans-application"></a>
 
 Even though this is a simple solution, based upon high level product areas it will help leaders in the business, and category managers gain a clearer understanding of the customer base.
 
@@ -362,7 +370,8 @@ Based upon these clusters, the client will be able to target customers more accu
 
 ___
 <br>
-# Growth & Next Steps <a name="growth-next-steps"></a>
+
+## Growth & Next Steps <a name="growth-next-steps"></a>
 
 It would be interesting to run this clustering/segmentation at a lower level of product areas, so rather than just the four areas of Meat, Dairy, Fruit, Vegetables - clustering spend across the sub-categories *below* those categories. This would mean we could create more specific clusters, and get an even more granular understanding of dietary preferences within the customer base. This might be especially useful for *Cluster 0* above, which contains nearly 3 out of every 4 customers. 
 
