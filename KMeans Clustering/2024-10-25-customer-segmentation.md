@@ -286,7 +286,6 @@ kmeans.fit(data_for_clustering_scaled)
 
 ```
 
-<br
     
 ### Append Clusters To Customers <a name="kmeans-append-clusters"></a>
 
