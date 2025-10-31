@@ -34,7 +34,7 @@ These projects collectively showcase a range of core data science skills:
 - Emphasized interpretability via feature and permutation importance.  
 - Provided actionable business insight: proximity to store was the top predictor of signups.
 
-➡️ [View Project →](Classification%20Modeling/2024-10-19-enhancing-targeting-accuracy.md)
+➡️ [View Project →](Classification%20Modelling/2024-10-19-enhancing-targeting-accuracy.md)
 
 ---
 
